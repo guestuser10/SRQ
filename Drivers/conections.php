@@ -1,9 +1,9 @@
 <?php 
     define('HOST', 'localhost');
     define('DBNAME', 'SRQ');
-    define('PORT', 1433);
-    define('USERNAME', 'sealehen');
-    define('PASSWORD', '3306');
+    define('PORT', '3306');
+    define('USERNAME', 'root');
+    define('PASSWORD', '1234');
 
     class conexion{
         public static function conectar(){
