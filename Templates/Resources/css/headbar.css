@@ -1,0 +1,50 @@
+body{
+    font-family:sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: solid black;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px; 
+    background-color: lightslategray;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.logo{
+    display: flex;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+
+}
+
+nav a:hover{
+    color: white;
+}
+
+@media(max-width:768px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
