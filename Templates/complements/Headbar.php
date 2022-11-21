@@ -16,8 +16,8 @@
             <img src="../Resources/media/yuumi.jpg" alt="logo de la fim" class="logo-img" />
             <h2 class="Facultad-de-ingenieria-mochis"></h2>
             <nav>
-                <a href="" class="Mis Solicitudes"></a>
-                <a href="" class="Enviar una solicitud"></a>
+                <a href="" class="Mis-Solicitudes">Mis Solicitudes</a>
+                <a href="" class="Enviar-una-solicitud">Enviar una solicitud</a>
             </nav>
         </div>
     </header>
