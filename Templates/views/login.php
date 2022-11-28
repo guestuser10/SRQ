@@ -1,7 +1,7 @@
  
 
 <!DOCTYPE html>
-<!-- === Coding by CodingLab | www.codinglabweb.com === -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -99,7 +99,7 @@
         </div>
     </div>
 
-    <script src="../Resources/js/script.js"></script>
+    <script src="../Resources/js/login.js"></script>
 </body>
 </html>
 
