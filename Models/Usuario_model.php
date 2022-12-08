@@ -6,6 +6,7 @@
         private $contraseña;
         private $id_area;
         private $usuario_active;
+        private $tipo;
 
         
         public function __GET($k)
