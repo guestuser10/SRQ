@@ -1,3 +1,49 @@
+<?php
+   /* //include_once '../../Functions/Session.php';
+    include '../../Functions/users.php';
+    include '../../Functions/userSession.php';
+
+    $userSession = new UserSession();
+    $users = new User();
+
+
+    if(isset($_SESSION['users'])){
+        echo "Hay sesion";
+    }else if(isset($_POST['botoni']) && (isset($_POST['username']) && isset($_POST['password']))){
+        echo "Validacion de login ";
+        
+        $userForm = $_POST['username'];
+        $passForm = $_POST['password'];
+
+        //echo $userForm , " ";
+        //echo $passForm;
+        $fila = $users->userExists($userForm, $passForm);
+        if($fila <> null){
+            /*echo "<p>";
+            echo $fila ["id_usuario"];
+            echo "-"; // un separador
+            echo $fila["nombre"];
+            echo "-"; // un separador
+            echo $fila ["contraseña"];
+            echo "-"; // un separador
+            echo $fila["id_area"];
+            echo "</p>";
+            *//*
+            include_once '../View/home_.php';
+        }else{
+            include_once '../../Templates/views/login.php';
+            echo "Usuario y/o contraseña incorrecto";
+        }
+
+    }else{
+        echo "Login";
+        include_once '../../Templates/views/login.php';
+    }
+*/
+include '../../Functions/Session.php';
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -21,7 +67,7 @@
             <div class="form login">
                 <span class="title">Iniciar Sesion</span>
 
-                <form action="#">
+                <form action="" method="POST">
                     <div class="input-field">
                         <input type="text" name="username" placeholder="Ingresa tu Email" required>
                         <i class="uil uil-envelope icon"></i>
@@ -42,7 +88,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Iniciar Sesion">
+                        <input type="button" name="botoni" action='../../Functions/Session.php' value="Iniciar Sesion">
                     </div>
                 </form>
 
@@ -57,7 +103,7 @@
             <div class="form signup">
                 <span class="title">Registro</span>
 
-                <form action="#">
+                <form action="#" method="POST">
                     <div class="input-field">
                         <input type="text" placeholder="Ingresa tu nombre" required>
                         <i class="uil uil-user"></i>
