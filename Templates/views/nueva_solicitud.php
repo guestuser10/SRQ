@@ -5,28 +5,28 @@ include '../complements/Headbar.php'
 <html>
     <head>
         <title>Enviar una solicitud</title>
-        <link rel="stylesheet" href="../Resources/css/nueva_solicitud.css">
+        <link rel="stylescss" href="solicitud.css">
     </head>
     <body bgcolor="white">
-        <div class="title">
+        <center>
             <h1>Enviar una solicitud</h1>
             <form>Selecciona un tipo de solicitud</form>
             
-        </div>
-        <div class ="form-group">
+        </center>
+        <center>
             <select>
-                <option selected disabled>Area</option>
+                <option selected disabled>Reporte</option>
             </select>
-        </div>
-        <div class = "input-field">
+        </center>
+        <center>
             <h2></h2>
-            <form>Titulo</form>
+            <form>Descripcion</form>
             <input type="text" name="" placeholder="">
-        </div>
-        <div class = "input-field button">
+        </center>
+        <center>
             <h3></h3>
             <input type="button" value="Enviar" id="">
-        </div>
+        </center>
 
     </body>
 </html>
