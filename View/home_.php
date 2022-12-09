@@ -10,9 +10,13 @@
     <div id="menu">
         <ul>
             <li>Home</li>
-            <li class="cerrar-sesion">
+            <!--<li class="cerrar-sesion">
                 <a href="includes/logout.php">Cerrar sesion</a>
-                </li>
+            </li>-->
+            <li class="nueva-solicitud">
+                <a href="../Templates/views/nueva_solicitud.php">Nueva Solicitud</a>
+            </li>
+
         </ul>
     </div>
     <section>
