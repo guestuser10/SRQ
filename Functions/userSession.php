@@ -10,6 +10,11 @@ class UserSession{
        // $_SESSION['password'] = $tipo;
     }
 
+    public function setCurrentID($id){
+        $_SESSION['id_nombre'] = $id;
+       // $_SESSION['password'] = $tipo;
+    }
+
     public function setCurrentqueja($n_queja){
         $_SESSION['queja'] = $n_queja;
     }
@@ -17,6 +22,11 @@ class UserSession{
     public function getCurrentUser(){
         //return array ($_SESSION['nombre'], $_SESSION['tipo']);
         return $_SESSION['nombre'];
+    }
+
+    public function getCurrentID(){
+        //return array ($_SESSION['nombre'], $_SESSION['tipo']);
+        return $_SESSION['id_nombre'];
     }
 
     public function getCurrentqueja(){

@@ -16,7 +16,7 @@
             <img src="../../Templates/Resources/media/yuumi.jpg" alt="logo de la fim" class="logo-img" />
             <h2 class="Facultad-de-ingenieria-mochis"></h2>
             <nav>
-                <a href="" class="Mis-Solicitudes">Mis Solicitudes</a>
+                <a href="../Templates/views/ver_solicitud.php" class="Mis-Solicitudes">Solicitudes</a>
                 <a href="../Templates/views/nueva_solicitud.php" class="Enviar-una-solicitud">Enviar una solicitud</a>
             </nav>
         </div>

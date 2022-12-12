@@ -44,7 +44,6 @@
                     <h5></h5>
 
                 <?php endforeach ?>
-                <div class="container-inner container-inner--page">EJEMPLO</div>
 
                 <div class="container-inner container-inner--page">Escriba su mensaje</div>
                 <h1></h1>

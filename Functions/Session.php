@@ -21,7 +21,19 @@ if(isset($_SESSION['users'])){
         
         $userSession->setCurrentUser($userForm);
         $users->setUser($userForm);
-        echo $users->getNombre();
+        //echo $users->getNombre();
+
+        $conectar = mysqli_connect("127.0.0.1", "root", "123");
+        mysqli_select_db ($conectar,"srq");
+
+        $consulta= "SELECT id_usuario FROM usuario WHERE nombre='".$userSession->getCurrentUser()."'";
+        $id_area = mysqli_query($conectar,$consulta);
+        foreach ($id_area as $id_consulta){
+            $area_id = $id_consulta['id_usuario'];
+        }
+
+        $userSession->setCurrentID($area_id);
+
 
         include_once '../View/home_.php';
     }else{
