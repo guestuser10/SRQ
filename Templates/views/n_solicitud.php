@@ -1,7 +1,9 @@
 <?php
    // include_once '../../Drivers/conections.php';
     //include '../../Templates/views/nueva_solicitud.php';
+    include_once '../../Functions/userSession.php';
 
+    $userSession = new UserSession();
     
     //isset($_POST['narea'])    isset($_POST['Titulo_solicitud'])
         if($_POST['Titulo_solicitud'] != null  ){
@@ -19,6 +21,16 @@
             $consulta= "INSERT INTO ticket (title , id_area, id_ticket_state) VALUES ('".$tituloForm."', ".$area_id.", 1)";//.$nombre." AND contraseña = ".$contraseña;
             $titulo = mysqli_query($conectar,$consulta);
             
+            $consulta= "SELECT id_ticket FROM ticket WHERE id_ticket = (SELECT LAST_INSERT_ID())";//.$nombre." AND contraseña = ".$contraseña;
+            $id_ti = mysqli_query($conectar,$consulta);
+
+            foreach ($id_ti as $ticket_id){
+                $ti_id = $ticket_id['id_ticket'];
+            }
+
+            $userSession->setCurrentqueja($ti_id);
+            
+            include_once "mensaje.php";
 
         } else{
             include_once 'nueva_solicitud.php';

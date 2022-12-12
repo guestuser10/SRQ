@@ -5,13 +5,22 @@ class UserSession{
         session_start();
     }
     
-    public function setCurrentUser($nombre, $tipo){
+    public function setCurrentUser($nombre){
         $_SESSION['nombre'] = $nombre;
-        $_SESSION['tipo'] = $tipo;
+       // $_SESSION['password'] = $tipo;
+    }
+
+    public function setCurrentqueja($n_queja){
+        $_SESSION['queja'] = $n_queja;
     }
 
     public function getCurrentUser(){
-        return array ($_SESSION['nombre'], $_SESSION['tipo']);
+        //return array ($_SESSION['nombre'], $_SESSION['tipo']);
+        return $_SESSION['nombre'];
+    }
+
+    public function getCurrentqueja(){
+        return $_SESSION['queja'];
     }
     
     public function closeSession(){

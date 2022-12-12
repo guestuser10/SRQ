@@ -107,16 +107,25 @@ class User{
     }
 
     public function setUser($nombre){
-        $query = $this->conectar()->prepare('SELECT * FROM Usuario where nombre = :nombre');
-        $query->execute([':nombre'=> $nombre]);
+        //$consulta= "SELECT * FROM usuario where nombre = '".$nombre."'"." AND contraseña = '".$contraseña."'";//.$nombre." AND contraseña = ".$contraseña;
+        //mysqli_select_db ($conectar,"srq");
+        //$datos = mysqli_query($conectar,$consulta);
+        $conectar = mysqli_connect("127.0.0.1", "root", "123");
+        $query = "SELECT * FROM usuario where nombre = '".$nombre."'";
+        mysqli_select_db ($conectar,"srq");
+        $query = mysqli_query($conectar,$query);
+
+       // $query = $this->conectar()->prepare('SELECT * FROM Usuario where nombre = :nombre');
+       // $query->execute([':nombre'=> $nombre]);
 
         foreach ($query as $currentUser) {
-            $this->nombre_u = $currentUser['nombre'];
-            $this->tipo_u = $currentUser['tipo'];
+            $nombre_u = $currentUser['nombre'];
+           // $tipo_u = $currentUser['tipo'];
         }
     }
     
-    public function getNombre(){
+    public function getNombre(){ 
+        echo $this->nombre_u;
         return $this->nombre_u;
     }
 

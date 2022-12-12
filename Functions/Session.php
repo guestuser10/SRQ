@@ -18,16 +18,11 @@ if(isset($_SESSION['users'])){
     //echo $passForm;
     $fila = $users->userExists($userForm, $passForm);
     if($fila <> null){
-        /*echo "<p>";
-        echo $fila ["id_usuario"];
-        echo "-"; // un separador
-        echo $fila["nombre"];
-        echo "-"; // un separador
-        echo $fila ["contraseña"];
-        echo "-"; // un separador
-        echo $fila["id_area"];
-        echo "</p>";
-        */
+        
+        $userSession->setCurrentUser($userForm);
+        $users->setUser($userForm);
+        echo $users->getNombre();
+
         include_once '../View/home_.php';
     }else{
         include_once '../View/login_.php';
